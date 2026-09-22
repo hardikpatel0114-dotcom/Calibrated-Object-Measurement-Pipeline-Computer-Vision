@@ -1,0 +1,65 @@
+# ============================================================
+# XIS Assessment .gitignore
+# Large files (calibration images, dataset, model weights) are
+# hosted on Google Drive per Section 2.2 — NEVER commit them here.
+# The GitHub repo stays lightweight: code, configs, docs, samples.
+# ============================================================
+
+# --- Bulk image data (hosted on Google Drive) ---
+# Trailing /* keeps the folders tracked via their .gitkeep, ignores contents.
+calibration/images/*
+dataset/raw/*
+dataset/train/*
+dataset/val/*
+dataset/test/*
+dataset/exports/*
+models/weights/*
+
+# --- Model weights / large binaries ---
+*.pth
+*.pt
+*.onnx
+*.ckpt
+*.h5
+*.pkl
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# --- Video ---
+*.mp4
+*.mov
+*.avi
+
+# --- Keep curated small samples, doc figures, folder markers ---
+!samples/
+!samples/**
+!docs/figures/
+!docs/figures/**
+!**/.gitkeep
+
+# --- Derived large image outputs (regenerated from Drive-hosted data) ---
+dataset/undistorted/*
+calibration/detected/*
+inference/demo_outputs/*
+measurement/eval_images/*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+*.egg-info/
+.pytest_cache/
+
+# --- Source brief (not part of the submission) ---
+xis AI Assessment task.pdf
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

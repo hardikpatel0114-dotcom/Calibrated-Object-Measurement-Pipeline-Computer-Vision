@@ -1,0 +1,132 @@
+{
+  "image_size": [
+    3024,
+    4032
+  ],
+  "pattern_inner_corners": [
+    7,
+    9
+  ],
+  "square_size_mm": 20.0,
+  "num_images_total": 28,
+  "num_images_used": 20,
+  "num_images_dropped": 8,
+  "dropped_frames": [
+    "IMG_0215.jpg",
+    "IMG_0216.jpg",
+    "IMG_0219.jpg",
+    "IMG_0224.jpg",
+    "IMG_0225.jpg",
+    "IMG_0228.jpg",
+    "IMG_0231.jpg",
+    "IMG_0238.jpg"
+  ],
+  "rms_reprojection_error_px": 0.7634336973031401,
+  "mean_reprojection_error_px": 0.7634336022429721,
+  "camera_matrix": [
+    [
+      2995.7629412329497,
+      0.0,
+      1515.70439440636
+    ],
+    [
+      0.0,
+      2984.8710465327417,
+      2014.3283132103734
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "distortion_coefficients": [
+    0.10229395481395942,
+    -0.2758577393234952,
+    -9.985887211454018e-06,
+    0.0003146923440881393,
+    0.0
+  ],
+  "per_image_error": [
+    {
+      "image": "IMG_0214.jpg",
+      "rmse_px": 0.548210069159917
+    },
+    {
+      "image": "IMG_0217.jpg",
+      "rmse_px": 0.6016513774632938
+    },
+    {
+      "image": "IMG_0218.jpg",
+      "rmse_px": 0.8649930706679821
+    },
+    {
+      "image": "IMG_0220.jpg",
+      "rmse_px": 0.6097712936507154
+    },
+    {
+      "image": "IMG_0221.jpg",
+      "rmse_px": 0.687141400622914
+    },
+    {
+      "image": "IMG_0222.jpg",
+      "rmse_px": 0.7341391948321563
+    },
+    {
+      "image": "IMG_0223.jpg",
+      "rmse_px": 1.0167531220033015
+    },
+    {
+      "image": "IMG_0226.jpg",
+      "rmse_px": 0.6154292116489375
+    },
+    {
+      "image": "IMG_0227.jpg",
+      "rmse_px": 0.6993467820152424
+    },
+    {
+      "image": "IMG_0229.jpg",
+      "rmse_px": 0.7190464659186202
+    },
+    {
+      "image": "IMG_0230.jpg",
+      "rmse_px": 0.8276848943469091
+    },
+    {
+      "image": "IMG_0232.jpg",
+      "rmse_px": 0.7895547338522841
+    },
+    {
+      "image": "IMG_0233.jpg",
+      "rmse_px": 0.5876539766712966
+    },
+    {
+      "image": "IMG_0234.jpg",
+      "rmse_px": 0.5443413897950906
+    },
+    {
+      "image": "IMG_0235.jpg",
+      "rmse_px": 0.5022835863853026
+    },
+    {
+      "image": "IMG_0236.jpg",
+      "rmse_px": 1.2518927332384806
+    },
+    {
+      "image": "IMG_0237.jpg",
+      "rmse_px": 0.8590399851512117
+    },
+    {
+      "image": "IMG_0239.jpg",
+      "rmse_px": 0.7720030669110558
+    },
+    {
+      "image": "IMG_0240.jpg",
+      "rmse_px": 0.6549126525644198
+    },
+    {
+      "image": "IMG_0241.jpg",
+      "rmse_px": 0.9548875489366224
+    }
+  ]
+}

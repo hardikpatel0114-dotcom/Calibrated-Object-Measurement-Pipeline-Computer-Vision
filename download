@@ -1,0 +1,14 @@
+.venv/
+.git/
+__pycache__/
+*.pyc
+calibration/images/
+dataset/raw/
+dataset/undistorted/
+dataset/train/
+dataset/val/
+dataset/test/
+models/weights/*.pth
+*.mp4
+*.zip
+xis AI Assessment task.pdf

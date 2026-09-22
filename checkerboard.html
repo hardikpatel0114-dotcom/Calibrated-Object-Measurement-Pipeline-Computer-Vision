@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XIS Calibration Checkerboard — 8×10 squares (7×9 inner corners)</title>
+<style>
+  html,body{margin:0;height:100%;background:#fff;overflow:hidden;
+    font-family:system-ui,Segoe UI,Arial,sans-serif;}
+  #wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;}
+  canvas{display:block;}
+  #cap{position:fixed;left:8px;bottom:6px;font-size:12px;color:#888;
+    background:rgba(255,255,255,.7);padding:2px 6px;border-radius:4px;}
+  @media print{#cap{display:none}}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="cb"></canvas></div>
+<div id="cap">8×10 squares · 7×9 inner corners · press <b>F</b> for fullscreen · then photograph this screen with your phone</div>
+<script>
+// Checkerboard: 8 columns x 10 rows of squares  ->  7 x 9 INNER corners
+// (meets the XIS "minimum 7x9 inner corners" requirement exactly).
+const COLS = 8, ROWS = 10;
+const cv = document.getElementById('cb'), ctx = cv.getContext('2d');
+function draw(){
+  const dpr = window.devicePixelRatio || 1;
+  const W = window.innerWidth, H = window.innerHeight;
+  // white quiet-zone margin around the board aids corner detection
+  const margin = Math.round(Math.min(W, H) * 0.06);
+  const sq = Math.floor(Math.min((W - 2*margin)/COLS, (H - 2*margin)/ROWS));
+  const boardW = sq*COLS, boardH = sq*ROWS;
+  cv.width  = boardW*dpr; cv.height = boardH*dpr;
+  cv.style.width = boardW+'px'; cv.style.height = boardH+'px';
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle = '#fff'; ctx.fillRect(0,0,boardW,boardH);
+  ctx.fillStyle = '#000';
+  for(let r=0;r<ROWS;r++)
+    for(let c=0;c<COLS;c++)
+      if((r+c)%2===0) ctx.fillRect(c*sq, r*sq, sq, sq);
+  // report the on-screen square size so you can note it (optional)
+  document.getElementById('cap').innerHTML =
+    `8×10 squares · 7×9 inner corners · square ≈ ${sq}px on screen ·`
+    + ` press <b>F</b> for fullscreen · photograph this screen with your phone`;
+}
+addEventListener('resize', draw);
+addEventListener('keydown', e=>{ if(e.key.toLowerCase()==='f'){
+  if(!document.fullscreenElement) document.documentElement.requestFullscreen();
+  else document.exitFullscreen();
+}});
+draw();
+</script>
+</body>
+</html>
